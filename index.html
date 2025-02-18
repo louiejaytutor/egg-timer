@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Egg Timer</title>
+  <link href="https://fonts.googleapis.com/css?family=Pixelify Sans" rel="stylesheet">
+  <link href="static/css/main.css" rel="stylesheet">
+</head>
+<body>
+  <div id="desktop" class="desktop">
+    <img src="static/img/egg-1.png">
+    <span>Egg Timer</span>
+  </div>
+  <div id="window" class="window" style="opacity: 0; pointer-events: none;">
+    <div id="title-bar" class="title-bar">
+      <span class="title-text">Egg Timer <3</span>
+      <div class="button-group">
+        <button id="back-btn" class="back-btn" title="Back"><</button>
+        <button id="close-btn" class="close-btn" title="Close">X</button>
+      </div>
+    </div>
+    <div class="content">
+      <div id="start-page" class="start-page">
+        <div class="start-page-title">
+          Let's time your egg!
+        </div>
+        <div>
+          <button id="start-btn" title="Start">Start</button>
+        </div>
+      </div>
+      <div id="menu-page" class="menu-page" style="display: none;">
+        <div class="menu-page-title">
+          What are you making today?
+        </div>
+        <div class="menu-page-content">
+          <div onclick="startTimer(10)" title="Soft Boiled (3 minutes)">
+            <img src="static/img/soft-boiled.png">
+            <span>Soft Boiled</span>
+          </div>
+          <div onclick="startTimer(300)" title="Medium Boiled (5 minutes)">
+            <img src="static/img/medium-boiled.png">
+            <span>Medium Boiled</span>
+          </div>
+          <div onclick="startTimer(420)" title="Hard Boiled (7 minutes)">
+            <img src="static/img/hard-boiled.png">
+            <span>Hard Boiled</span>
+          </div>
+          <div onclick="startTimer(600)" title="Extra Hard Boiled (10 minutes)">
+            <img src="static/img/extra-hard-boiled.png">
+            <span>Extra Hard Boiled</span>
+          </div>
+        </div>
+      </div>
+      <div id="timer-page" class="timer-page" style="display: none;">
+        <div id="timer-page-title" class="timer-page-title">
+          Your egg is ready in...
+        </div>
+        <div class="timer-page-content">
+          <div id="image-slider">
+            <img id="slider-image" src="static/img/chick-1.png">
+          </div>
+          <span id="timer" class="timer">00:00</span>
+          <div id="timer-page-content-button" class="timer-page-content-button">
+            <button onclick="startTimer(60)" title="1 more minute">Snooze</button>
+            <button id="close-timer-btn" title="Close">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="static/js/main.js"></script>
+</body>
+</html>
