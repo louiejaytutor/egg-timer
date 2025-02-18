@@ -30,7 +30,7 @@ body {
   border-radius: 10px;
 }
 .desktop:hover {
-  background-color: var(--color-4);
+  background-color: rgba(255, 230, 111, 0.25);
 }
 .desktop img {
   zoom: 0.1;
