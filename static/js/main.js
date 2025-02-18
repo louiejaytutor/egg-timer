@@ -40,6 +40,8 @@ desktop.addEventListener("click", () => {
   windowElement.style.opacity = 1;
   windowElement.style.pointerEvents = "all";
 
+  desktop.style.pointerEvents = "none";
+
   startPage.style.display = "block";
   menuPage.style.display = "none";
   timerPage.style.display = "none";
@@ -49,6 +51,8 @@ closeBtn.addEventListener("click", () => {
   sound.play();
   windowElement.style.opacity = 0;
   windowElement.style.pointerEvents = "none";
+
+  desktop.style.pointerEvents = "all";
   
   soundtrack.pause();
   soundtrack.currentTime = 0;
