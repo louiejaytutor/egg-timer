@@ -43,8 +43,6 @@ desktop.addEventListener("click", () => {
   startPage.style.display = "block";
   menuPage.style.display = "none";
   timerPage.style.display = "none";
-
-  stopTimer();
 });
 
 closeBtn.addEventListener("click", () => {
@@ -54,6 +52,7 @@ closeBtn.addEventListener("click", () => {
   
   soundtrack.pause();
   soundtrack.currentTime = 0;
+  stopTimer();
 });
 
 // Drag functionality
